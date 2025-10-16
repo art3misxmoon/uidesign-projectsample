@@ -1,0 +1,334 @@
+@font-face {
+    font-family: "Raster Forge Font";
+    src: url("/static/fonts/RasterForgeRegular-JpBgm.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #FAFCFC;
+}
+
+/* colors
+
+background white: #FAFCFC;
+orange: #E27F00;
+light grey: #626E6C;
+aqua: #A6CAC0;
+dark grey: #50635E;
+
+*/
+
+/* navbar */
+
+.navbar {
+    background-color: #A6CAC0;
+}
+
+.navbar-brand {
+    font-size: 19px;
+    color: #FAFCFC;
+    text-decoration: none;
+}
+
+.searchtext {
+    font-size: 13px;
+    height: 2.7em;
+}
+
+.search {
+    color: #E27F00;
+    border-color: #E27F00;
+    font-size: 13px;
+    height: 2.7em;
+}
+
+.search:hover {
+    background-color: #E27F00;
+    color: #FAFCFC;
+    border-color: #E27F00;
+}
+
+.add {
+    color: #FAFCFC;
+    border-color: #FAFCFC;
+    height: 2.7em;
+    font-size: 13px;
+}
+
+.add:hover {
+    background-color: #FAFCFC;
+    color: #E27F00;
+    border-color: #FAFCFC;
+}
+
+/* gameinfo page */
+
+.infostuff {
+    display: flex;
+    flex-direction: column;
+    height: 35em;
+}
+
+.imgcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 35em;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+    min-height: 3em;
+}
+
+.infoimage {
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    padding-top: 3.2em;
+}
+
+.infotitle {
+    font-size: 32px;
+    font-family: "Raster Forge Font", sans-serif;
+    color: #081926;
+}
+
+.leftborder {
+    border-left-style: solid;
+    border-color: #A6CAC0;
+    margin-left: 1em;
+    padding: 1em 1em 1em 1em;
+}
+
+.infodescription {
+    font-size: 13px;
+}
+
+.person {
+    height: 3em;
+    vertical-align: bottom;
+}
+
+.lighttext {
+    color: #626E6C;
+}
+
+.info {
+    padding-right: 2.5em;
+    font-size: 13px;
+}
+
+.infogenres, .infoconsoles, .infom, .infomultiplayer {
+    font-size: 13px;
+    font-weight: bold;
+    color: #50635E;
+}
+
+.editform {
+    float: right;
+}
+
+/* home page */
+
+.title {
+    color: #E27F00;
+    font-family: "Raster Forge Font", sans-serif;
+    font-size: 35px;
+    text-align: left;
+    padding-left: 1.7em;
+}
+
+.subtitle {
+    color: #50635E;
+    padding-left: 3.8em;
+}
+
+.homedescription {
+    font-size: 13px;
+    padding-left: 4.5em;
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+.logo {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.spacer {
+    height: 1em;
+}
+
+.aqua {
+    background-color: #A6CAC0;
+    min-height: 50vh;
+}
+
+.fav {
+    background-color: #FAFCFC;
+    border-radius: 1em 1em 1em 1em;
+    height: 13em;
+    vertical-align: top;
+    display: flex;
+    align-items: center;
+}
+
+.favorites {
+    padding: 0em 1.5em 0em 1.5em;
+}
+
+.favtitle {
+    font-size: 15px;
+    color: #50635E;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.favimage {
+    padding: 1em 1em 1em 0em;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.favplayers, .favconsoles, .favgenres {
+    color: #626E6C;
+    font-size: 14px;
+}
+
+/* search */
+
+.result {
+    background-color: #E2EEEB;
+    border-radius: 1em;
+    margin: 1em;
+    height: 15em;
+}
+
+.resultimage {
+    height: 100%;
+    display: block;
+    margin-left: 2em;
+}
+
+.resultimgcontainer {
+    height: 70%;
+}
+
+.resulttitle {
+    font-size: 18px;
+    color: darkslategray;
+    text-align: left;
+
+}
+
+.resultplayers, .resultconsoles, .resultgenres {
+    font-size: 14px;
+}
+
+.resultleftborder {
+    border-left-style: solid;
+    border-color: #A6CAC0;
+    padding: 1em 1em 1em 2em;
+    line-height: 200%;
+    font-size: 13px;
+}
+
+.resultplayershighlight, .resultconsoleshighlight, .resultgenreshighlight {
+    color: #626E6C;
+}
+
+.subtitle {
+    color: #50635E;
+}
+
+.matchingresult {
+    background-color: rgba(255, 165, 0, .4);
+}
+
+/* add/edit */
+
+.addgame, .editgame {
+    line-height: 200%;
+}
+
+.addtitle, .addimage, .addreleaseyear, .adddescription, .addmultiplayer, .addconsoles, .addgenres {
+    background: #ECECEC;
+    border-style: solid;
+    border-color: #ECECEC;
+    font-size: 14px;
+}
+
+.addconsoles, .addgenres {
+    width: 20em;
+}
+
+.adddescription {
+    width: 50em;
+    height: 8em;
+    line-height: 150%;
+}
+
+label, .titlewarning, .imagewarning, .releaseyearwarning, .descriptionwarning, .multiplayerwarning, .consoleswarning, .genreswarning {
+    color: #50635E;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 1em;
+}
+
+.titlewarning, .imagewarning, .releaseyearwarning, .descriptionwarning, .multiplayerwarning, .consoleswarning, .genreswarning {
+    color: red;
+    padding-left: 1em;
+}
+
+.addgamebutton, .discard {
+    float: right;
+    background-color: #A6CAC0;
+    border-color: #A6CAC0;
+    color: #FAFCFC;
+    height: 2.7em;
+    font-size: 13px;
+    margin-left: 1.5em;
+}
+
+.addgamebutton:hover, .discard:hover {
+    background-color: #FAFCFC;
+    color: #A6CAC0;
+    border-color: #A6CAC0;
+}
+
+.creatednotif {
+    color: #E27F00;
+}
+
+a.addlink {
+    color: #E27F00;
+    text-decoration: underline;
+}
+
+a.addlink:hover {
+    color: #50635E;
+}
+
+/* other */
+
+
+a {
+    color: #50635E;
+    text-decoration: underline;
+
+}
+
+a:hover {
+    color: #42858c;
+    font-weight: bolder;
+    text-decoration: none;
+}

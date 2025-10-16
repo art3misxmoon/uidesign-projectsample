@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'main.js') }}"></script>
+
+
+    <title>Nintendo Game Finder</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/">Nintendo Game Finder</a>
+
+        <div class="d-flex forms">
+          <form class="searchform d-flex">
+            <input class="form-control me-2 searchtext" type="search" placeholder="enter game here" aria-label="search">
+            <button type="submit" class="btn btn-outline-primary search">search</button>
+          </form>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <form class="addform d-flex">
+            <button type="submit" class="btn btn-outline-secondary add">add</button>
+          </form>
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container-fluid">   
+        {% block content %}
+        {% endblock %}
+    </div>
+
+  </body>
+</html>
+
+
+
+

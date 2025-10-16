@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+	<script>
+	    var gameid = "{{gameid}}"
+	</script>
+
+	<script type="text/javascript" src="{{ url_for('static', filename = 'gameinfo.js') }}"></script>
+
+	<div class="container">
+		<div class="row">
+			<div class="infostuff col-8">
+				<div class="row">
+					<div class="col-5">
+						<br><br>
+						<span class="infotitle">TITLE</span> <span class="inforeleaseyear">year</span>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row">
+					<div class="leftborder col-12">
+						<span class="lighttext info">consoles: </span><span class="infoconsoles">a, b</span><br>
+						<span class="lighttext info">genres: </span><span class="infogenres">a, b</span>
+					</div>
+				</div>
+				
+				<div class="flex-grow-1"></div>
+
+				<div class="row">
+					<div class="col-11">
+						<span class="infodescription lighttext">description description</span><br><br>
+						<span class="infom">maximum local player count: </span><span class="infomultiplayer">x</span>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-4 imgcontainer d-flex flex-column">
+				<img class="infoimage img-fluid" src="https://www.haworth.com/content/dam/surfaces/north-america/trim/smooth/other/7r_10/7r_10.jpg">
+				<br>
+				<br>
+				<form class="editform d-flex">
+					<button type="submit" class="btn btn-outline-secondary edit">edit</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}

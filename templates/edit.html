@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+	<script>
+	    var gameid = "{{gameid}}"
+	</script>
+
+	<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+	<div class="dialog" title="discard changes">
+		are you sure?
+		<button type="submit" class="btn btn-outline-secondary confirmdiscard">yes</button>
+		<button type="submit" class="btn btn-outline-secondary undodiscard">no</button>
+	</div>
+
+	<form class="editgame">
+		<br>
+		<label for="title">enter title:</label>
+		<input type="text" class="addtitle" placeholder="game title">
+		<span class="titlewarning"></span>
+
+		<br>
+		<label for="releaseyear">enter release year:</label>
+		<input type="text" class="addreleaseyear" placeholder="release year">
+		<span class="releaseyearwarning"></span>
+
+		<br>
+		<label for="imagelink">enter image:</label>
+		<input type="text" class="addimage" placeholder="link">
+		<span class="imagewarning"></span>
+		<br>
+		<div class="resultleftborder">
+			<label for="consoles">enter consoles:</label>
+			<input type="text" class="addconsoles" placeholder="a comma and space separated list">
+			<span class="consoleswarning"></span>
+
+			<br>
+			<label for="genres">enter genres:</label>
+			<input type="text" class="addgenres" placeholder="a comma and space separated list">
+			<span class="genreswarning"></span>
+		</div>
+		<br>
+
+		<label for="description">enter description:</label>
+		<br>
+		<textarea class="adddescription" name="text" rows="14" cols="10" wrap="soft" placeholder="a 4-sentence description of the game, including gameplay and skill development information"> </textarea>
+		<br><span class="descriptionwarning"></span>
+
+		<br>
+		<label for="playercount">enter max local player count:</label>
+		<input type="text" class="addmultiplayer" placeholder="number between 1 and 8">
+		<span class="multiplayerwarning"></span>
+
+		<br>
+		<button type="submit" class="btn btn-outline-primary addgamebutton">edit game!</button>
+	</form>
+	<button type="submit" class="btn btn-outline-primary discard">discard changes</button>
+
+{% endblock %}

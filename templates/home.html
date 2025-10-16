@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+    
+	<script>
+	    var data = {{data|tojson}}
+	</script>
+
+	<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-6">
+			<div class="row title">Nintendo Game Finder</div>
+			<div class="row bold subtitle">looking for games to play with friends?</div>
+			<br>
+			<div class="row">
+				<div class="homedescription lighttext col-12">
+					This database allows you to <span class="bold">search for Nintendo games based on genre, title, local multiplayer capabilities, and consoles</span>. If you've never played Nintendo before but are looking for the game for you, try this out!
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<img class="logo" src="/static/images/logo.png" alt="nintendo game finder logo with nintendo and search icons">
+		</div>
+	</div>
+	<br><br>
+	<div class="row aqua">
+		<div class="spacer row"></div>
+		<div class="row favorites">
+		</div>
+		<br>
+	</div>
+{% endblock %}
